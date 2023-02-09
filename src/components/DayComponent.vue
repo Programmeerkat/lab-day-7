@@ -32,7 +32,7 @@ export default {
   margin: 10px 0 10px 0;
 }
 .date {
-  font-size: 10px;
+  font-size: 16px;
 }
 input {
   background-color: #f1f1f1;
