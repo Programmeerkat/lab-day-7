@@ -1,6 +1,6 @@
 <template>
   <v-container fluid>
-    <img alt="Clarify logo" src="./assets/logo.png" height="100" />
+    <img alt="Clarify logo" :src="require('./assets/logo.png')" height="100" />
     <v-select v-model="select" :items="getWeeks()" :menu-props="{ top: true, offsetY: true }" label="Week"></v-select>
     <ComboBox v-bind:tasks="tasks" weekNumber="" v-on:childToParent="onChildClick" />
     Example of a week {{ select }}
@@ -49,7 +49,6 @@ export default {
       ];
       return weeks;
     },
-
     // Triggered when `childToParent` event is emitted by the child.
     onChildClick(value) {
       this.selectedTasks = value;
