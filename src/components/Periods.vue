@@ -23,6 +23,23 @@
     </v-col>
   </v-row>
   <v-btn @click="clicked = !clicked">Standard week fill in</v-btn>
+				<v-card-text>
+				<v-window v-model="tab">
+					<v-window-item value="weeks" class="text-left">
+						<WeekComponent :weekdata="weekdata"/>
+					</v-window-item>
+					<v-window-item value="months" class="text-left">
+						<div  class="month-container">
+							<div v-for="month in months" :key="month">
+								<MonthComponent :month="month.slice(0, 3)" />
+							</div>
+						</div>
+					</v-window-item>
+				</v-window>
+				</v-card-text>
+			</v-card>
+		</v-col>
+    </v-row>
 </template>
 
 <script>
@@ -146,4 +163,9 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped></style>
+<style scoped>
+.month-container {
+  display: flex;
+  padding: 20px;
+}
+</style>
