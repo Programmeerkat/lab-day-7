@@ -17,8 +17,10 @@
 						<WeekComponent :weekdata="weekdata"/>
 					</v-window-item>
 					<v-window-item value="months" class="text-left">
-						<div v-for="month in months" :key="month">
-							<MonthComponent :month="month.slice(0, 3)" />
+						<div  class="month-container">
+							<div v-for="month in months" :key="month">
+								<MonthComponent :month="month.slice(0, 3)" />
+							</div>
 						</div>
 					</v-window-item>
 				</v-window>
@@ -105,4 +107,8 @@ import MonthComponent from './MonthComponent.vue'
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+.month-container {
+	display: flex;
+	padding: 20px;
+}
 </style>

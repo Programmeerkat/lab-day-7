@@ -23,7 +23,7 @@ export default {
   vertical-align: middle;
   font-size: 30px;
   border-radius: 5px;
-
+  margin: 10px;
   box-shadow: 5px 5px 5px gray;
 }
 </style>
