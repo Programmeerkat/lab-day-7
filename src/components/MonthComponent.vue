@@ -1,16 +1,16 @@
 <template>
   <div class="month-container">
- {{ month }}
+    {{ month }}
   </div>
 </template>
 
 <script>
 export default {
-  name: 'DayComponent',
+  name: "DayComponent",
   props: {
-    month: String
-  }
-}
+    month: String,
+  },
+};
 </script>
 
 <style scoped>
