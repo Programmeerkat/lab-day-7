@@ -19,11 +19,10 @@ export default {
   components: {
     Periods,
     ComboBox,
-    ButtonComponent,
+    ButtonComponent
   },
   data: () => ({
     tab: null,
-    // weeks: getWeeks(),
     select: null,
     tasks: [
       "105781 - Boels",
@@ -31,7 +30,7 @@ export default {
       "100123 - Doctor",
       "100622 - Dentist",
       "100101 - Availability",
-      "100523 - Education",
+      "100523 - Education"
     ],
     selectedTasks: []
   }),
@@ -46,12 +45,11 @@ export default {
         "1/2 - 7/2",
         "8/2 - 14/2",
         "15/2 - 21/2",
-        "22/2 - 28/2",
-      ],
+        "22/2 - 28/2"
+      ];
       return weeks;
-    }
-  },
-  methods: {
+    },
+
     // Triggered when `childToParent` event is emitted by the child.
     onChildClick(value) {
       this.selectedTasks = value;
