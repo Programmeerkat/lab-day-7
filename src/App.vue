@@ -3,13 +3,13 @@
     <img alt="Clarify logo" src="./assets/logo.png" height="100" />
     <v-select
       v-model="select"
-      :items="weekNumbers"
+      :items="getWeeks()"
       :menu-props="{ top: true, offsetY: true }"
-      label="Weeknumber"
+      label="Week"
     ></v-select>
     <ComboBox v-bind:tasks="tasks" weekNumber="" />
     Example of a week {{ select }}
-    <Periods />
+    <Periods :week="select" />
   </v-container>
 </template>
 
@@ -25,7 +25,7 @@ export default {
   },
   data: () => ({
     tab: null,
-    weekNumbers: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16],
+    // weeks: getWeeks(),
     select: null,
     tasks: [
       "105781 - Boels",
@@ -36,6 +36,22 @@ export default {
       "100523 - Education",
     ],
   }),
+  methods: {
+    getWeeks() {
+      const weeks = [
+        "1/1 - 7/1",
+        "8/1 - 14/1",
+        "15/1 - 21/1",
+        "22/1 - 28/1",
+        "29/1 - 31/1",
+        "1/2 - 7/2",
+        "8/2 - 14/2",
+        "15/2 - 21/2",
+        "22/2 - 28/2",
+      ]
+      return weeks;
+    }
+  }
 };
 </script>
 
