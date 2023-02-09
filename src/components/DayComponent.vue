@@ -25,13 +25,14 @@ export default {
   font-size: 30px;
   border-radius: 5px;
   box-shadow: 5px 5px 5px gray;
+  flex-grow: 1;
 }
 .day {
   font-size: 20px;
   margin: 10px 0 10px 0;
 }
 .date {
-  font-size: 10px;
+  font-size: 16px;
 }
 input {
   background-color: #f1f1f1;

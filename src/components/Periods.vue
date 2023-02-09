@@ -14,7 +14,7 @@
 				<v-card-text>
 				<v-window v-model="tab">
 					<v-window-item value="weeks" class="text-left">
-						<WeekComponent />
+						<WeekComponent :weekdata="weekdata"/>
 					</v-window-item>
 					<v-window-item value="months" class="text-left">
 						<div v-for="month in months" :key="month">
@@ -54,6 +54,50 @@ import MonthComponent from './MonthComponent.vue'
 				"October",
 				"November",
 				"December"
+			],
+			weekdata: [
+				{
+					day: "Mon",
+					date: "01-01-2023",
+					hours: "8",
+					task: "Boels"
+				},
+				{
+					day: "Tue",
+					date: "02-01-2023",
+					hours: "8",
+					task: "Geheim project"
+				},
+				{
+					day: "Wed",
+					date: "03-01-2023",
+					hours: "8",
+					task: "Buitelandse zaken"
+				},
+				{
+					day: "Thu",
+					date: "04-01-2023",
+					hours: "8",
+					task: "Logius"
+				},
+				{
+					day: "Fri",
+					date: "05-01-2023",
+					hours: "8",
+					task: "UWV"
+				},
+				{
+					day: "Sat",
+					date: "06-01-2023",
+					hours: "0",
+					task: ""
+				},
+				{
+					day: "Sun",
+					date: "07-01-2023",
+					hours: "0",
+					task: ""
+				},
 			]
 		})
 	};

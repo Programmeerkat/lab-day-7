@@ -1,14 +1,14 @@
 <template>
-<img alt="Clarify logo" src="./assets/logo.png" height="100" />
   <v-container fluid>
-  <div class="main-container">
-    <div class="tab-container">
+    <img alt="Clarify logo" src="./assets/logo.png" height="100" />
+    <v-select
+      :items="weekNumbers"
+      :menu-props="{ top: true, offsetY: true }"
+      label="Weeknumber"
+    ></v-select>
+    <ComboBox v-bind:tasks="tasks" />
+    Example of a week
     <Periods />
-    </div>
-    <div class="combobox-container">
-      <ComboBox v-bind:tasks="tasks" />
-    </div>
-  </div>
   </v-container>
 </template>
 
@@ -20,19 +20,20 @@ export default {
   name: "App",
   components: {
     Periods,
-    ComboBox
+    ComboBox,
   },
   data: () => ({
     tab: null,
+    weekNumbers: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16],
     tasks: [
       "105781 - Boels",
       "100213 - Vacation",
       "100123 - Doctor",
       "100622 - Dentist",
       "100101 - Availability",
-      "100523 - Education"
-    ]
-  })
+      "100523 - Education",
+    ],
+  }),
 };
 </script>
 
@@ -44,13 +45,4 @@ export default {
   text-align: center;
   color: #2c3e50;
 }
-.main-container {
-    display: flex;        
-  }
-  .combobox-container{
-    flex:1;
-  }
-  .tab-container{
-    flex:4;
-  }
 </style>
