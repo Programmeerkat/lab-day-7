@@ -25,6 +25,7 @@ export default {
   font-size: 30px;
   border-radius: 5px;
   box-shadow: 5px 5px 5px gray;
+  flex-grow: 1;
 }
 .day {
   font-size: 20px;

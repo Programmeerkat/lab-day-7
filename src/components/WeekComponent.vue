@@ -20,8 +20,8 @@ export default {
 
 <style scoped>
 .week-container {
-  width: 500px;
-  display: grid;
+  display: flex;
+  justify-content: space-between;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   background-color: DodgerBlue;
   border-radius: 5px;
