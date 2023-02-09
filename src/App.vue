@@ -7,7 +7,7 @@
       :menu-props="{ top: true, offsetY: true }"
       label="Weeknumber"
     ></v-select>
-    <ComboBox v-bind:tasks="tasks" weekNumber="" />
+    <ComboBox v-bind:tasks="tasks" />
     Example of a week {{ select }}
     <Periods />
   </v-container>
