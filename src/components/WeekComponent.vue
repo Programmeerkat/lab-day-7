@@ -6,7 +6,7 @@
     <DayComponent day="Mon" date="01-01-2023" hours="0"/>
     <DayComponent day="Mon" date="01-01-2023" hours="0"/>
     <DayComponent day="Mon" date="01-01-2023" hours="0"/>
-    <DayComponent day="Mon" date="01-01-2023" hours="1"/>
+    <DayComponent day="Mon" date="01-01-2023" hours="8"/>
   </div>
 </template>
 
