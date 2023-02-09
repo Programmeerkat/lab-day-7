@@ -16,9 +16,10 @@
 					<v-window-item value="weeks" class="text-left">
 						<WeekComponent :weekdata="weekdata"/>
 					</v-window-item>
-
 					<v-window-item value="months" class="text-left">
-					months
+						<div v-for="month in months" :key="month">
+							<MonthComponent :month="month.slice(0, 3)" />
+						</div>
 					</v-window-item>
 				</v-window>
 				</v-card-text>
@@ -29,13 +30,31 @@
 
 <script>
 import WeekComponent from './WeekComponent.vue'
+import MonthComponent from './MonthComponent.vue'
 
 	export default {
 		// eslint-disable-next-line vue/multi-word-component-names
 		name: "Periods",
-		components: { WeekComponent },
+		components: {
+			WeekComponent,
+			MonthComponent
+		},
 		data: () => ({
 			tab: null,
+			months: [
+				"January",
+				"February",
+				"March",
+				"April",
+				"May",
+				"June",
+				"July",
+				"August",
+				"September",
+				"October",
+				"November",
+				"December"
+			],
 			weekdata: [
 				{
 					day: "Mon",
@@ -80,7 +99,7 @@ import WeekComponent from './WeekComponent.vue'
 					task: ""
 				},
 			]
-		}),
+		})
 	};
 </script>
 
