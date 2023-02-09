@@ -1,12 +1,16 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
-    <ComboBox />
+    <v-container fluid>
+        <ComboBox />
+        <Periods />
+    </v-container>
   </div>
 </template>
 
 <script>
 import ComboBox from "./ComboBox.vue";
+import Periods from "./Periods.vue";
 
 export default {
   name: "HelloWorld",
@@ -14,7 +18,8 @@ export default {
     msg: String
   },
   components: {
-    ComboBox
+    ComboBox,
+    Periods
   }
 };
 </script>
