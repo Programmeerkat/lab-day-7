@@ -2,7 +2,7 @@
   <div class="container">
     <div class="day">{{ day }}</div>
     <div class="date">{{ date }}</div>
-    <input type="number" min="0" value="hours">
+    <input v-bind:value="hours">
   </div>
 </template>
 
@@ -20,24 +20,24 @@ export default {
 <style scoped>
 .container {
   background-color: #f1f1f1;
-  width: 100px;
   margin: 10px;
   text-align: center;
-  line-height: 75px;
   font-size: 30px;
+  border-radius: 5px;
+  box-shadow: 5px 5px 5px gray;
 }
 .day {
   font-size: 20px;
+  margin: 10px 0 10px 0;
 }
 .date {
   font-size: 10px;
 }
 input {
   background-color: #f1f1f1;
-  width: 50px;
   margin: 10px;
   text-align: center;
-  line-height: 75px;
   font-size: 30px;
+  width: 22px;
 }
 </style>

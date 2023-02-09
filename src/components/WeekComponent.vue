@@ -28,8 +28,11 @@ export default {
 
 <style scoped>
 .week-container {
-  display: flex;
-  flex-wrap: nowrap;
+  width: 500px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   background-color: DodgerBlue;
+  border-radius: 5px;
+  box-shadow: 5px 5px 5px gray;
 }
 </style>
