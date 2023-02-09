@@ -1,8 +1,13 @@
 <template>
-  <img alt="Clarify logo" src="./assets/logo.png" height="100" />
-  <ComboBox v-bind:tasks="tasks" />
-  Example of a week
-  <WeekComponent />
+<img alt="Clarify logo" src="./assets/logo.png" height="100" />
+<div class="main-container">
+    <div class="tab-container">
+      <WeekComponent/>
+    </div>
+    <div class="tab-container">
+      <ComboBox v-bind:tasks="tasks" />
+    </div>
+  </div>
 </template>
 
 <script>
