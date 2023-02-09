@@ -14,7 +14,7 @@
 				<v-card-text>
 				<v-window v-model="tab">
 					<v-window-item value="weeks" class="text-left">
-						<WeekComponent />
+						<WeekComponent :weekdata="weekdata"/>
 					</v-window-item>
 
 					<v-window-item value="months" class="text-left">
@@ -36,6 +36,43 @@ import WeekComponent from './WeekComponent.vue'
 		components: { WeekComponent },
 		data: () => ({
 			tab: null,
+			weekdata: [
+				{
+					day: "Mon",
+					date: "01-01-2023",
+					hours: "8",
+				},
+				{
+					day: "Tue",
+					date: "02-01-2023",
+					hours: "8",
+				},
+				{
+					day: "Wed",
+					date: "03-01-2023",
+					hours: "8",
+				},
+				{
+					day: "Thu",
+					date: "04-01-2023",
+					hours: "8",
+				},
+				{
+					day: "Fri",
+					date: "05-01-2023",
+					hours: "8",
+				},
+				{
+					day: "Sat",
+					date: "06-01-2023",
+					hours: "8",
+				},
+				{
+					day: "Sun",
+					date: "07-01-2023",
+					hours: "8",
+				},
+			]
 		}),
 	};
 </script>
