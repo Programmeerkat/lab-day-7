@@ -9,6 +9,7 @@
     ></v-select>
     <ComboBox v-bind:tasks="tasks" weekNumber="" />
     Example of a week {{ select }}
+    <ButtonComponent label="Add task"/>
     <Periods :week="select" />
   </v-container>
 </template>
@@ -16,12 +17,14 @@
 <script>
 import Periods from "./components/Periods.vue";
 import ComboBox from "./components/ComboBox.vue";
-
+import ButtonComponent from "./components/ButtonComponent.vue";
+	
 export default {
   name: "App",
   components: {
     Periods,
     ComboBox,
+    ButtonComponent,
   },
   data: () => ({
     tab: null,
