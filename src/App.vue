@@ -4,7 +4,7 @@
     <div class="tab-container">
       <WeekComponent/>
     </div>
-    <div class="tab-container">
+    <div class="combobox-container">
       <ComboBox v-bind:tasks="tasks" />
     </div>
   </div>
@@ -43,4 +43,13 @@ export default {
   text-align: center;
   color: #2c3e50;
 }
+.main-container {
+    display: flex;        
+  }
+  .combobox-container{
+    flex:1;
+  }
+  .tab-container{
+    flex:4;
+  }
 </style>
