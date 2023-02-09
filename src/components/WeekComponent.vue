@@ -1,35 +1,34 @@
 <template>
   <div class="week-container">
-    <DayComponent day="Mon" date="01-01-2023" hours="0"/>
-    <DayComponent day="Mon" date="01-01-2023" hours="0"/>
-    <DayComponent day="Mon" date="01-01-2023" hours="0"/>
-    <DayComponent day="Mon" date="01-01-2023" hours="0"/>
-    <DayComponent day="Mon" date="01-01-2023" hours="0"/>
-    <DayComponent day="Mon" date="01-01-2023" hours="0"/>
-    <DayComponent day="Mon" date="01-01-2023" hours="8"/>
+    <DayComponent
+      v-for="item in weekdata"
+      :key="item.date"
+      :day="item.day"
+      :date="item.date"
+      :hours="item.hours"
+      :task="item.task"
+    />
   </div>
 </template>
 
 <script>
-import DayComponent from './DayComponent.vue'
+import DayComponent from "./DayComponent.vue";
 
 export default {
-  name: 'WeekComponent',
+  name: "WeekComponent",
   components: {
     DayComponent,
-},
+  },
   props: {
-    msg: String,
-    day: String,
-    hours: String
-  }
-}
+    weekdata: Array,
+  },
+};
 </script>
 
 <style scoped>
 .week-container {
-  width: 500px;
-  display: grid;
+  display: flex;
+  justify-content: space-between;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   background-color: DodgerBlue;
   border-radius: 5px;

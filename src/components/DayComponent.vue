@@ -2,19 +2,21 @@
   <div class="container">
     <div class="day">{{ day }}</div>
     <div class="date">{{ date }}</div>
-    <input v-bind:value="hours">
+    <div class="task">{{ task }}</div>
+    <input v-bind:value="hours" />
   </div>
 </template>
 
 <script>
 export default {
-  name: 'DayComponent',
+  name: "DayComponent",
   props: {
     day: String,
     date: String,
-    hours: String
-  }
-}
+    hours: String,
+    task: String,
+  },
+};
 </script>
 
 <style scoped>
@@ -25,13 +27,18 @@ export default {
   font-size: 30px;
   border-radius: 5px;
   box-shadow: 5px 5px 5px gray;
+  flex-grow: 1;
 }
 .day {
   font-size: 20px;
   margin: 10px 0 10px 0;
 }
 .date {
-  font-size: 10px;
+  font-size: 16px;
+}
+.task {
+  font-size: 15px;
+  font-weight: 700;
 }
 input {
   background-color: #f1f1f1;
