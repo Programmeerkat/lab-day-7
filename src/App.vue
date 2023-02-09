@@ -1,14 +1,14 @@
 <template>
-<img alt="Clarify logo" src="./assets/logo.png" height="100" />
+  <img alt="Clarify logo" src="./assets/logo.png" height="100" />
   <v-container fluid>
-  <div class="main-container">
-    <div class="tab-container">
-    <Periods />
+    <div class="main-container">
+      <div class="tab-container">
+        <Periods />
+      </div>
+      <div class="combobox-container">
+        <ComboBox :tasks="tasks" v-on:childToParent="onChildClick" />
+      </div>
     </div>
-    <div class="combobox-container">
-      <ComboBox v-bind:tasks="tasks" />
-    </div>
-  </div>
   </v-container>
 </template>
 
@@ -31,8 +31,15 @@ export default {
       "100622 - Dentist",
       "100101 - Availability",
       "100523 - Education"
-    ]
-  })
+    ],
+    selectedTasks: []
+  }),
+  methods: {
+    // Triggered when `childToParent` event is emitted by the child.
+    onChildClick(value) {
+      this.selectedTasks = value;
+    }
+  }
 };
 </script>
 
@@ -45,12 +52,12 @@ export default {
   color: #2c3e50;
 }
 .main-container {
-    display: flex;        
-  }
-  .combobox-container{
-    flex:1;
-  }
-  .tab-container{
-    flex:4;
-  }
+  display: flex;
+}
+.combobox-container {
+  flex: 1;
+}
+.tab-container {
+  flex: 4;
+}
 </style>
