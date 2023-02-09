@@ -7,7 +7,7 @@
       label="Weeknumber"
     ></v-select>
     <ComboBox v-bind:tasks="tasks" />
-    Weeknumber
+    Example of a week
     <Periods />
   </v-container>
 </template>
@@ -39,7 +39,7 @@ export default {
 
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: Calibri, Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
