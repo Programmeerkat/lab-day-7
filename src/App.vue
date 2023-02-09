@@ -1,6 +1,6 @@
 <template>
   <v-container fluid>
-    <img alt="Clarify logo" src="./assets/logo.png" height="100" />
+    <img alt="Clarify logo" :src="require('./assets/logo.png')" height="100" />
     <ComboBox v-bind:tasks="tasks" />
     Example of  a week
     <Periods />
