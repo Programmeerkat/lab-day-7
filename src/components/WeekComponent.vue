@@ -1,21 +1,28 @@
 <template>
   <div class="week-container">
-    <DayComponent v-for="item in weekdata" :key="item.date" :day="item.day" :date="item.date" :hours="item.hours"/>
+    <DayComponent
+      v-for="item in weekdata"
+      :key="item.date"
+      :day="item.day"
+      :date="item.date"
+      :hours="item.hours"
+      :task="item.task"
+    />
   </div>
 </template>
 
 <script>
-import DayComponent from './DayComponent.vue'
+import DayComponent from "./DayComponent.vue";
 
 export default {
-  name: 'WeekComponent',
+  name: "WeekComponent",
   components: {
     DayComponent,
-},
+  },
   props: {
     weekdata: Array,
-  }
-}
+  },
+};
 </script>
 
 <style scoped>
