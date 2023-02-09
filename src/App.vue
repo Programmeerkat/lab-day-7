@@ -1,22 +1,24 @@
 <template>
-  <img alt="Clarify logo" src="./assets/logo.png" height="100" />
-  <ComboBox v-bind:tasks="tasks" />
-  Example of a week
-  <WeekComponent />
+  <v-container fluid>
+    <img alt="Clarify logo" src="./assets/logo.png" height="100" />
+    <ComboBox v-bind:tasks="tasks" />
+    Example of  a week
+    <Periods />
+  </v-container>
 </template>
 
 <script>
-import WeekComponent from "./components/WeekComponent.vue";
+import Periods from './components/Periods.vue'
 import ComboBox from "./components/ComboBox.vue";
 
 export default {
   name: "App",
   components: {
+    Periods,
     ComboBox,
-    WeekComponent
   },
-  data() {
-    return {
+  data: () => ({
+      tab: null,
       tasks: [
         "105781 - Boels",
         "100213 - Vacation",
@@ -25,9 +27,8 @@ export default {
         "100101 - Availability",
         "100523 - Education"
       ]
-    };
-  }
-};
+    }),
+}
 </script>
 
 <style>

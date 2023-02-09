@@ -1,0 +1,74 @@
+{
+	"weeks":
+	[
+	  	{
+			"investering" : "Logius_DigiD Machtigen_DOT_ADD",
+			"idInvestering" : "NL-GFS100706486",
+			"fase" : "Agile Delivery Team",
+			"bovenliggend" : "Agile Delivery",
+			"idTaak": "32201-EXE",
+			"beschrijving" :"Sprint execution",
+			"codeInvoertype" : "STD",
+			"days": [{
+				"monday" : "",
+				"tuesday" : "",
+				"wednesday" : "",
+				"thursday" : "",
+				"friday" : "",
+				"saturday" : "disabled",
+				"sunday" : "disabled"
+			}],
+			"totaal": "0",
+			"etc": "0",
+			"start": "04-01-2021",
+			"einde": "28-02-2023",
+			"geboekteGerealiseerdeWaarden": "3.449,00"
+		},
+	  	{
+			"investering" : "K52 - Education",
+			"idInvestering" : "NL-GFS100307054",
+			"fase" : "",
+			"bovenliggend" : "",
+			"idTaak": "3000",
+			"beschrijving" :"Task 100% Cost",
+			"codeInvoertype" : "STD",
+			"days": [{
+				"monday" : "",
+				"tuesday" : "",
+				"wednesday" : "",
+				"thursday" : "",
+				"friday" : "",
+				"saturday" : "disabled",
+				"sunday" : "disabled"
+			}],
+			"totaal": "0",
+			"etc": "0",
+			"start": "01-10-2019",
+			"einde": "30-01-2023",
+			"geboekteGerealiseerdeWaarden": "84"
+		},
+	  	{
+			"investering" : "CEA-NL-Vacation",
+			"idInvestering" : "CEA-NL-&910",
+			"fase" : "",
+			"bovenliggend" : "",
+			"idTaak": "1",
+			"beschrijving" :"Vacation",
+			"codeInvoertype" : "STD",
+			"days": [{
+				"monday" : "",
+				"tuesday" : "",
+				"wednesday" : "",
+				"thursday" : "",
+				"friday" : "",
+				"saturday" : "disabled",
+				"sunday" : "disabled"
+			}],
+			"totaal": "0",
+			"etc": "0",
+			"start": "18-10-2019",
+			"einde": "23-02-2023",
+			"geboekteGerealiseerdeWaarden": "608"
+		}
+	]
+}
