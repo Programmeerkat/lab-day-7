@@ -3,7 +3,6 @@
     <img alt="Clarify logo" :src="require('./assets/logo.png')" height="100" />
     <v-select v-model="select" :items="getWeeks()" :menu-props="{ top: true, offsetY: true }" label="Week"></v-select>
     <ComboBox v-bind:tasks="tasks" weekNumber="" v-on:childToParent="onChildClick" />
-    Example of a week {{ select }}
     <ButtonComponent label="Add task" />
     <Periods :week="select" />
   </v-container>
