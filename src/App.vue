@@ -1,20 +1,19 @@
 <template>
-  <HelloWorld />
-  <ComboBox/>
-  Example of  a week
-  <WeekComponent/>
+  <v-container fluid>
+    <ComboBox/>
+    Example of  a week
+    <Periods />
+  </v-container>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-import WeekComponent from './components/WeekComponent.vue'
+import Periods from './components/Periods.vue'
 import ComboBox from "./components/ComboBox.vue";
 
 export default {
   name: 'App',
   components: {
-    HelloWorld,
-    WeekComponent,
+    Periods,
     ComboBox,
 
   },
